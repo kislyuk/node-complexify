@@ -5,7 +5,7 @@ node.js wrapper for [jquery.complexify.js](https://github.com/danpalmer/jquery.c
 
 ## Installing
 ```
-npm install node-complexity
+npm install node-complexify
 ```
 
 ## Usage
