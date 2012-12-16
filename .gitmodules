@@ -1,3 +1,0 @@
-[submodule "lib/jquery.complexify.js"]
-	path = lib/jquery.complexify.js
-	url = git://github.com/danpalmer/jquery.complexify.js.git
