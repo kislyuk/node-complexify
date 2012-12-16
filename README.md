@@ -1,7 +1,7 @@
 node-complexify
 ===============
 
-node.js wrapper for [jquery.complexify.js](https://github.com/danpalmer/jquery.complexify.js/)
+node.js port of [jquery.complexify.js](https://github.com/danpalmer/jquery.complexify.js/)
 
 ## Installing
 ```
