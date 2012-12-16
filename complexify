@@ -1,26 +1,6 @@
 #!/usr/bin/env node
 
-var fs = require('fs');
-var jsdom = require('jsdom').jsdom;
-
-function evalPasswordComplexity(password, callback) {
-  jsdom.env({'html': '<input id="password" value="' + password + '" />',
-             'scripts': [__dirname + '/lib/jquery.js',
-                         __dirname + '/lib/jquery.complexify.js/jquery.complexify.js'],
-             'done': function(errors, window) {
-               var $ = window.$;
-               var options = {
-                 // minimumChars: 8,
-                 // strengthScaleFactor: 1,
-               };
-
-               $("#password").complexify(options, function(valid, complexity) {
-                 callback(null, {"complexity": complexity, "valid": valid});
-               });
-
-               $('#password').trigger('keyup');
-             }});
-}
+var complexify = require('./lib/complexify');
 
 if (process.argv[2] == undefined) {
   console.error("Evaluate password complexity using jquery.complexify.js.");
@@ -29,7 +9,7 @@ if (process.argv[2] == undefined) {
   process.exit(1);
 }
 
-evalPasswordComplexity(process.argv[2], function(err, result) {
+complexify.evalPasswordComplexity(process.argv[2], function(err, result) {
   console.log(JSON.stringify(result));
   if (!result.valid) {
     process.exit(2);
