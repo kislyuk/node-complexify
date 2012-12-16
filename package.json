@@ -1,0 +1,8 @@
+{
+  "name": "node-complexify",
+  "version": "0.0.1",
+  "description": "node.js wrapper for jquery.complexify.js",
+  "dependencies": {
+    "jsdom": "0.3.1"
+  }
+}
