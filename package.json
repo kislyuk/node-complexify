@@ -4,7 +4,6 @@
   "description": "node.js wrapper for jquery.complexify.js",
   "main": "./lib/complexify",
   "dependencies": {
-    "jsdom": "0.3.1"
   },
   "bin": {
     "complexify": "./complexify"
