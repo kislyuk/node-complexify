@@ -13,9 +13,9 @@ As a module:
 ```javascript
 var complexify = require('node-complexify');
 
-complexify.evalPasswordComplexity("MadHatter", function(err, result) {
-  console.log(result.complexity);
-  console.log(result.valid);
+complexify.evalPasswordComplexity("MadHatter", function(err, valid, complexity) {
+  console.log(complexity);
+  console.log(valid);
 });
 ```
 
