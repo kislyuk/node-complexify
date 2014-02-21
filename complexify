@@ -10,7 +10,7 @@ if (process.argv[2] == undefined) {
 }
 
 complexify.evalPasswordComplexity(process.argv[2], function(err, valid, complexity) {
-  console.log(JSON.stringify({valid: valid, complexity: complexity}));
+  console.log(JSON.stringify({ err: err, valid: valid, complexity: complexity }));
   if (!valid) {
     process.exit(2);
   }
