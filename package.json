@@ -4,6 +4,7 @@
   "description": "node.js wrapper for jquery.complexify.js",
   "main": "./lib/complexify",
   "dependencies": {
+      "underscore" : "*"
   },
   "bin": {
     "complexify": "./complexify"
